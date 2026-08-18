@@ -19,3 +19,9 @@ jobs:
     steps:
       - name: Verificando a versao do node
         run: node -v
+      - name: Setup Node.js
+        uses: actions/setup-node@v7
+        with:
+          node-version: 'latest'
+      - name: Verificando a versao do node
+        run: node -v
