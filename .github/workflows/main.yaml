@@ -8,9 +8,14 @@ jobs:
   primeiro-job:
     runs-on: ubuntu-latest
     steps:
-      - name: Primeiro acao
+      - name: Primeiro acao        
         run: echo "Hello, World!"
       - name: Segundo acao
         run: |
           echo "vc criou seu primeiro workflow!"
           echo "parabens!"
+  segundo-job:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Verificando a versao do node
+        run: node -v
