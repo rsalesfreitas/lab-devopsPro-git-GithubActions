@@ -6,6 +6,7 @@ on:
   workflow_dispatch:
 jobs:
   primeiro-job:
+    name: Demonstrando a primeira acao com hello world
     runs-on: ubuntu-latest
     steps:
       - name: Primeiro acao        
@@ -15,6 +16,8 @@ jobs:
           echo "vc criou seu primeiro workflow!"
           echo "parabens!"
   segundo-job:
+    name: Setup do Node.js
+    needs: primeiro-job
     runs-on: ubuntu-latest
     steps:
       - name: Verificando a versao do node
